@@ -9,5 +9,6 @@ import Foundation
 
 struct CurrencyModel {
     let baseCurrency : String
-    let convertCurrency : Float
+    let secondCurrency : String
+    let convertCurrencyNumber : Float
 }

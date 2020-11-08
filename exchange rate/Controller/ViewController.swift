@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     var tagClick : Int = 0
     var userselect : String?
+    var convertTo : String?
    
 
     @IBOutlet weak var currencyTopDisplayed: UIButton!
@@ -49,15 +50,25 @@ class ViewController: UIViewController {
             
             //this give us what the user select
             userselect = setUpCurrency.unit
-            refreshCurrency()
+            convertTo = currencyBottomDisplayed.currentTitle
+            
             print("top currency seleted")
+            print(convertTo as Any)
+            
+            refreshCurrency()
+           
                         
         }else if tagClick == 2{
             currencyBottomDisplayed.setTitle(setUpCurrency.unit, for: .normal)
             bottomCurrencySubtitle.text = setUpCurrency.unitName
-            userselect = setUpCurrency.unit
-            refreshCurrency()
+            //userselect = setUpCurrency.unit
+           convertTo = currencyBottomDisplayed.currentTitle
+            
             print("botom currency seleted")
+          //  print(convertTo as Any)
+            
+            refreshCurrency()
+            
         }
     }
     
@@ -71,20 +82,22 @@ class ViewController: UIViewController {
         
         switch sender {
         case topTextField:
+            userselect = currencyTopDisplayed.currentTitle
+            convertTo = currencyBottomDisplayed.currentTitle
             refreshCurrency()
            
             print("top was selected")
             
         case bottomTextField:
-            
-           
+           // userselect = currencyBottomDisplayed.currentTitle
+            //convertTo = currencyTopDisplayed.currentTitle
+           refreshCurrency()
             print("bottom was selected")
+            
         default:
             print("wtf")
         }
-        
     }
-    
     
 }
 
@@ -124,9 +137,10 @@ extension ViewController{
         
         }
     func refreshCurrency()  {
-        currencyManager.fetchCurrency(currency: userselect ?? "cny")
+        currencyManager.fetchCurrency(currency: userselect ?? "cny", secondCurrency: convertTo ?? "thb" )
         
     }
+    
         
 }
 
@@ -137,8 +151,9 @@ extension ViewController : CurrencyManagerDelegate{
     func didUpdateCurrency(_ currencyManager: CurrencyManager, currency: CurrencyModel) {
         DispatchQueue.main.async {
         
-            let currencyObtain = currency.convertCurrency
+            let currencyObtain = currency.convertCurrencyNumber
             
+   
             if self.topTextField.text != "" {
                 let topInput = Float(self.topTextField.text!)
                 self.bottomTextField.text = String(currencyObtain*topInput!)
@@ -147,7 +162,7 @@ extension ViewController : CurrencyManagerDelegate{
                 self.bottomTextField.text = K.blank
             }
             
-            
+//
 //            if self.bottomTextField.text != ""{
 //                let bottomInput = Float(self.bottomTextField.text!)
 //                self.topTextField.text = String(currencyObtain*bottomInput!)
@@ -155,7 +170,7 @@ extension ViewController : CurrencyManagerDelegate{
 //                self.bottomTextField.placeholder = "input amount"
 //                self.topTextField.text = ""
 //            }
-//
+
             
         }
     }
