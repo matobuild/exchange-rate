@@ -37,8 +37,7 @@ class ViewController: UIViewController {
         initializeHideKeyboard()
         
         currencyManager.delegate = self
-        loading.startAnimating()
-        
+                
         
     }
     
@@ -50,6 +49,8 @@ class ViewController: UIViewController {
     
     func setCurrency(_ setUpCurrency: Objects)  {
         if tagClick == 1{
+            loading.startAnimating()
+
             currencyTopDisplayed.setTitle(setUpCurrency.unit, for: .normal)
             topCurrencySubtitle.text = setUpCurrency.unitName
             
@@ -65,6 +66,8 @@ class ViewController: UIViewController {
             print(convertTo as Any)
   
         }else if tagClick == 2{
+            loading.startAnimating()
+
             currencyBottomDisplayed.setTitle(setUpCurrency.unit, for: .normal)
             bottomCurrencySubtitle.text = setUpCurrency.unitName
             
@@ -96,6 +99,8 @@ class ViewController: UIViewController {
         
         switch sender {
         case topTextField:
+            loading.startAnimating()
+
             convertType.setTitle(K.convertDown, for: .normal)
             userselect = currencyTopDisplayed.currentTitle
             convertTo = currencyBottomDisplayed.currentTitle
@@ -105,6 +110,8 @@ class ViewController: UIViewController {
             
             
         case bottomTextField:
+            loading.startAnimating()
+
             convertType.setTitle(K.convertUp, for: .normal)
             userselect = currencyBottomDisplayed.currentTitle
             convertTo = currencyTopDisplayed.currentTitle
@@ -195,6 +202,7 @@ extension ViewController : CurrencyManagerDelegate{
                 }
                 
             }
+            self.loading.stopAnimating()
         }
     }
     
