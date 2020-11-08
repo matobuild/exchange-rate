@@ -49,10 +49,10 @@ class ViewController: UIViewController {
             topCurrencySubtitle.text = setUpCurrency.unitName
             
       
-            if convertType.titleLabel?.text == "convert down"{
+            if convertType.titleLabel?.text == K.convertDown{
                 userselect = setUpCurrency.unit
                 convertTo = currencyBottomDisplayed.currentTitle
-            }else if convertType.titleLabel?.text == "convert Up"{
+            }else if convertType.titleLabel?.text == K.convertUp{
                 userselect = currencyBottomDisplayed.currentTitle
                 convertTo = setUpCurrency.unit
             }
@@ -63,10 +63,10 @@ class ViewController: UIViewController {
             currencyBottomDisplayed.setTitle(setUpCurrency.unit, for: .normal)
             bottomCurrencySubtitle.text = setUpCurrency.unitName
             
-            if convertType.titleLabel?.text == "convert down"{
+            if convertType.titleLabel?.text == K.convertDown{
                 userselect = currencyTopDisplayed.currentTitle
                 convertTo = setUpCurrency.unit
-            }else if convertType.titleLabel?.text == "convert Up"{
+            }else if convertType.titleLabel?.text == K.convertUp{
                 userselect = setUpCurrency.unit
                 convertTo = currencyTopDisplayed.currentTitle
             }
@@ -91,7 +91,7 @@ class ViewController: UIViewController {
         
         switch sender {
         case topTextField:
-            convertType.setTitle("convert down", for: .normal)
+            convertType.setTitle(K.convertDown, for: .normal)
             userselect = currencyTopDisplayed.currentTitle
             convertTo = currencyBottomDisplayed.currentTitle
             refreshCurrency()
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             
             
         case bottomTextField:
-            convertType.setTitle("convert Up", for: .normal)
+            convertType.setTitle(K.convertUp, for: .normal)
             userselect = currencyBottomDisplayed.currentTitle
             convertTo = currencyTopDisplayed.currentTitle
             refreshCurrency()
@@ -168,7 +168,7 @@ extension ViewController : CurrencyManagerDelegate{
             
             //if top was selected and change
             
-            if self.convertType.titleLabel?.text == "convert down"{
+            if self.convertType.titleLabel?.text == K.convertDown{
                 
                 if self.topTextField.text != "" {
                     let topInput = Float(self.topTextField.text!)
@@ -177,7 +177,7 @@ extension ViewController : CurrencyManagerDelegate{
                     self.topTextField.placeholder = K.amountNeededForInput
                     self.bottomTextField.text = K.blank
                 }
-            }else if self.convertType.titleLabel?.text == "convert Up"{
+            }else if self.convertType.titleLabel?.text == K.convertUp{
                 //if bottom was sellected and change
                 if self.bottomTextField.text != ""{
                     let bottomInput = Float(self.bottomTextField.text!)

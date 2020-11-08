@@ -15,4 +15,7 @@ struct K {
     static let neededCell = "cell"
     
     static let URLForApi = "https://v6.exchangerate-api.com/v6/83be30f08548ebe9fe80fe64/latest/"
+    
+    static let convertUp = "convert Up"
+    static let convertDown = "convert down"
 }
