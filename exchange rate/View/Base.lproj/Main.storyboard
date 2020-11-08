@@ -93,9 +93,17 @@
                                     <action selector="convertPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kev-zY-zb6"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-n8-PBr" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="40" y="320" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballPulse"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zwr-1m-Scn" secondAttribute="trailing" constant="20" id="3J4-4S-hM7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3OX-Dv-oed" secondAttribute="trailing" constant="20" id="5yp-E4-hvB"/>
@@ -124,6 +132,7 @@
                         <outlet property="convertType" destination="3OX-Dv-oed" id="kEm-Ta-PMM"/>
                         <outlet property="currencyBottomDisplayed" destination="iBh-fi-0Es" id="MhA-3l-IXa"/>
                         <outlet property="currencyTopDisplayed" destination="9qd-ea-VWF" id="Q53-PE-0Pm"/>
+                        <outlet property="loading" destination="S2t-n8-PBr" id="GbG-AI-7ky"/>
                         <outlet property="topCurrencySubtitle" destination="lvk-QE-Ce1" id="14H-h0-nic"/>
                         <outlet property="topTextField" destination="Vgs-h5-yNS" id="2ot-or-bxV"/>
                         <segue destination="xZE-pE-cq7" kind="presentation" identifier="goToCurrency" id="2FH-d0-AxP"/>
@@ -206,6 +215,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

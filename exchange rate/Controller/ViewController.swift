@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class ViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyBottomDisplayed: UIButton!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var bottomCurrencySubtitle: UILabel!
+
+    @IBOutlet weak var loading: NVActivityIndicatorView!
     
     var currencyManager = CurrencyManager()
     
@@ -34,6 +37,8 @@ class ViewController: UIViewController {
         initializeHideKeyboard()
         
         currencyManager.delegate = self
+        loading.startAnimating()
+        
         
     }
     
