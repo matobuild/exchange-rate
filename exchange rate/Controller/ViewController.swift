@@ -172,7 +172,8 @@ extension ViewController : CurrencyManagerDelegate{
                 
                 if self.topTextField.text != "" {
                     let topInput = Float(self.topTextField.text!)
-                    self.bottomTextField.text = String(currencyObtain*topInput!)
+                    let calculatedCurrency = currencyObtain*topInput!
+                    self.bottomTextField.text = String(format: "%.2f", calculatedCurrency)
                 }else{
                     self.topTextField.placeholder = K.amountNeededForInput
                     self.bottomTextField.text = K.blank
@@ -181,10 +182,11 @@ extension ViewController : CurrencyManagerDelegate{
                 //if bottom was sellected and change
                 if self.bottomTextField.text != ""{
                     let bottomInput = Float(self.bottomTextField.text!)
-                    self.topTextField.text = String(currencyObtain*bottomInput!)
+                    let calculatedCurrency = currencyObtain*bottomInput!
+                    self.topTextField.text = String(format: "%.2f", calculatedCurrency)
                 }else{
-                    self.bottomTextField.placeholder = "input amount"
-                    self.topTextField.text = ""
+                    self.bottomTextField.placeholder = K.amountNeededForInput
+                    self.topTextField.text = K.blank
                 }
                 
             }
