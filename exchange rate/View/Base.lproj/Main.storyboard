@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,20 +14,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="exchange_rate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="M9i-Ev-dBG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="212-lJ-wF5" userLabel="topView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="frV-hX-i0G">
-                                                <rect key="frame" x="50" y="50" width="220" height="140"/>
+                                                <rect key="frame" x="50" y="50" width="220" height="184"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="lvk-QE-Ce1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="46.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="lvk-QE-Ce1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="61.5"/>
                                                         <string key="text">Chinese Renminbi 🇨🇳
 </string>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -35,7 +35,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="input amount" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgs-h5-yNS">
-                                                        <rect key="frame" x="0.0" y="46.5" width="220" height="47"/>
+                                                        <rect key="frame" x="0.0" y="61.5" width="220" height="61"/>
                                                         <color key="textColor" systemColor="systemTealColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -44,8 +44,8 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-ea-VWF">
-                                                        <rect key="frame" x="73" y="93.5" width="74" height="46.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                                        <rect key="frame" x="73.5" y="122.5" width="73" height="61.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                                         <state key="normal" title="CNY">
                                                             <color key="titleColor" systemColor="systemTealColor"/>
                                                         </state>
@@ -65,14 +65,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-Bg-oas" userLabel="bottomView">
-                                        <rect key="frame" x="0.0" y="240" width="320" height="240"/>
+                                        <rect key="frame" x="0.0" y="284" width="320" height="284"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-IC-9VR">
-                                                <rect key="frame" x="50" y="50" width="220" height="140"/>
+                                                <rect key="frame" x="50" y="50" width="220" height="184"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBh-fi-0Es">
-                                                        <rect key="frame" x="75" y="0.0" width="70" height="46.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                                        <rect key="frame" x="75.5" y="0.0" width="69" height="61.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                                         <state key="normal" title="THB">
                                                             <color key="titleColor" systemColor="systemBlueColor"/>
                                                         </state>
@@ -81,7 +81,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="input amount" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTW-Ce-bDw">
-                                                        <rect key="frame" x="0.0" y="46.5" width="220" height="47"/>
+                                                        <rect key="frame" x="0.0" y="61.5" width="220" height="61"/>
                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -89,11 +89,11 @@
                                                             <action selector="textFieldChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="8Gr-AG-LEX"/>
                                                         </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="zwr-1m-Scn">
-                                                        <rect key="frame" x="33.5" y="93.5" width="153.5" height="46.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="zwr-1m-Scn">
+                                                        <rect key="frame" x="32.5" y="122.5" width="155.5" height="61.5"/>
                                                         <string key="text">Thai Baht 🇹🇭
 </string>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                                         <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -111,7 +111,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-n8-PBr" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="103" y="207" width="114" height="66"/>
+                                <rect key="frame" x="103" y="251" width="114" height="66"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="56Y-4Q-MyG"/>
@@ -125,10 +125,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OX-Dv-oed">
-                                <rect key="frame" x="133" y="204" width="54" height="72"/>
+                                <rect key="frame" x="133" y="248" width="54" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="🤖">
+                                <state key="normal" title="💸">
                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                 </state>
                                 <connections>
@@ -170,11 +170,11 @@
             <objects>
                 <viewController id="xZE-pE-cq7" customClass="currencyController" customModule="exchange_rate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcQ-Y3-e3r">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0JB-gi-Saf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mNT-OP-rdX" customClass="MyCustomCell" customModule="exchange_rate" customModuleProvider="target">

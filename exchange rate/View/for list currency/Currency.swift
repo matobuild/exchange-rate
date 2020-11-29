@@ -57,7 +57,7 @@ struct Currency {
             "SGD":"Singapore Dollar 🇸🇬",
             "THB":"Thai Baht 🇹🇭",
             "TRY":"Turkish Lira 🇹🇷",
-            "TWD":"New Taiwan Dollar",
+            "TWD":"New Taiwan Dollar 🌎",
             "UAH":"Ukrainian Hryvnia 🇺🇦",
             "USD":"United States Dollar 🇺🇸",
             "UYU":"Uruguayan Peso 🇺🇾",
