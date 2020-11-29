@@ -6,5 +6,6 @@ target 'exchange rate' do
   # Pods for exchange rate
   
   pod 'NVActivityIndicatorView'
+  pod 'IQKeyboardManagerSwift'
 
 end
