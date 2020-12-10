@@ -15,7 +15,9 @@ struct Objects {
 var currency = Currency()
 var objectArray = [Objects]()
 
-    func dictToArray() {
+//var currencySectionTitles = [String]()
+
+func dictToArray() {
     for (key,value) in currency.currenciesUnit{
         objectArray.append(Objects(unit: key, unitName: value))
     }
@@ -29,7 +31,30 @@ func sortedCurrencies()-> [Objects]  {
     objectArray.sorted(by: { $0.unit < $1.unit })
 }
 
+func findCurrencyTitle()-> [String] {
+    var currencyTitle = [String]()
+    
+    for currency in sortedCurrencies(){
+        let currencyKey = String(currency.unit.prefix(1))
+             currencyTitle.append(currencyKey)
+    }
+    currencyTitle = currencyTitle.removingDuplicates()
 
+    return currencyTitle
+}
 
+extension Array where Element: Hashable {
+    func removingDuplicates() -> [Element] {
+        var addedDict = [Element: Bool]()
+
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
+    }
+}
 
 

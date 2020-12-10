@@ -11,7 +11,6 @@ class currencyController: UIViewController, UITableViewDelegate,UITableViewDataS
  
     let cellReuseIdentifier = K.neededCell
     
-    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +19,7 @@ class currencyController: UIViewController, UITableViewDelegate,UITableViewDataS
         tableView.dataSource = self
         
         dictToArray()
+       
     }
 
     //number of rows
@@ -45,8 +45,6 @@ class currencyController: UIViewController, UITableViewDelegate,UITableViewDataS
 
         let tapCurrency = getTap(index: indexPath)
         
- 
-      
         //clear all array
         objectArray.removeAll()
         
@@ -68,5 +66,37 @@ class currencyController: UIViewController, UITableViewDelegate,UITableViewDataS
         return object
     }
  
+}
+//MARK: - add title
+
+
+
+extension currencyController{
+
+    // adding section
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return findCurrencyTitle().count
+        }
+
+        func tableView(_ tableView: UITableView,
+                       titleForHeaderInSection section: Int) -> String? {
+            let sortedCurrency = findCurrencyTitle()
+            let currencySectionTitles = sortedCurrency[section]
+            return currencySectionTitles
+        }
+//
+//    Adding the Section Index
+//
+        func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+            findCurrencyTitle()
+        }
+
+    func tableView(_ tableView: UITableView,
+                   sectionForSectionIndexTitle title: String,
+                   at index: Int) -> Int {
+        index
+    }
+
 }
 
