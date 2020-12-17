@@ -63,8 +63,13 @@ class currencyController: UIViewController, UITableViewDelegate,UITableViewDataS
     }
     
     func getTap(index: IndexPath) -> Objects {
-        let currencyInitial = sortedCurrencies()[index.row].unit!
-        let currencyFullName = sortedCurrencies()[index.row].unitName!
+        let currencyKey = findCurrencyTitle()[index.section]
+        var currencyInitial = String()
+        var currencyFullName = String()
+        if let currencyValue = currencyDictionary[currencyKey]{
+             currencyInitial = currencyValue[index.row].unit!
+             currencyFullName = currencyValue[index.row].unitName!
+        }
         let object = Objects(unit: currencyInitial, unitName: currencyFullName    )
         return object
     }
