@@ -11,6 +11,7 @@ struct K {
     static let pointToCurrency = "goToCurrency"
     static let amountNeededForInput = "input amount"
     static let blank = ""
+    static let pointToSetting = "goToSetting"
     
     static let neededCell = "cell"
     

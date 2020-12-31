@@ -37,8 +37,17 @@ class ViewController: UIViewController {
         initializeHideKeyboard()
         
         currencyManager.delegate = self
-                
         
+
+        //swipe gesture
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+            self.view.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+            self.view.addGestureRecognizer(swipeRight)
+
+         
     }
     
     //MARK: - currency seletion
@@ -212,4 +221,25 @@ extension ViewController : CurrencyManagerDelegate{
     
     
 }
+//MARK: - Swipe gesture
 
+extension ViewController{
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizer.Direction.right:
+                print("Swiped right")
+                performSegue(withIdentifier: K.pointToSetting, sender: self)
+            case UISwipeGestureRecognizer.Direction.down:
+                print("Swiped down")
+            case UISwipeGestureRecognizer.Direction.left:
+                print("Swiped left")
+                performSegue(withIdentifier: K.pointToSetting, sender: self)
+            case UISwipeGestureRecognizer.Direction.up:
+                print("Swiped up")
+            default:
+                break
+            }
+        }
+    }
+}
