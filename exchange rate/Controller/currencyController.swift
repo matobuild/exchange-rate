@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class currencyController: UIViewController, UITableViewDelegate,UITableViewDataSource{
+  
+  var finishConvertingSoundEffect: AVAudioPlayer?
     
     let cellReuseIdentifier = K.neededCell
     
@@ -71,9 +74,21 @@ class currencyController: UIViewController, UITableViewDelegate,UITableViewDataS
              currencyFullName = currencyValue[index.row].unitName!
         }
         let object = Objects(unit: currencyInitial, unitName: currencyFullName    )
+      playSound()
         return object
     }
-    
+  
+  func playSound() {
+    let path = Bundle.main.path(forResource: "select.mp3", ofType: nil)!
+    let url = URL(fileURLWithPath: path)
+    do{
+      finishConvertingSoundEffect = try AVAudioPlayer(contentsOf: url)
+      finishConvertingSoundEffect?.play()
+    }catch{
+      fatalError("cant load sound")
+    }
+  }
+  
 }
 //MARK: - add title
 extension currencyController{

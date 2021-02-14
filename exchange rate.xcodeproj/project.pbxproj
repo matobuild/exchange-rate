@@ -23,6 +23,7 @@
 		48E28B17253A06820084ABC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E28B15253A06820084ABC3 /* Main.storyboard */; };
 		48E28B19253A06820084ABC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E28B18253A06820084ABC3 /* Assets.xcassets */; };
 		48E28B1C253A06820084ABC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E28B1A253A06820084ABC3 /* LaunchScreen.storyboard */; };
+		48ED899E25D9193F00DC4954 /* select.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 48ED899D25D9193F00DC4954 /* select.mp3 */; };
 		E12BEA8F1F1C59C977822DA6 /* Pods_exchange_rate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971EC1FDCBB36B36E70D06F /* Pods_exchange_rate.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		48E28B18253A06820084ABC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48E28B1B253A06820084ABC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48E28B1D253A06820084ABC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48ED899D25D9193F00DC4954 /* select.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = select.mp3; sourceTree = "<group>"; };
 		DFA8C923F9CA52DD7DCF3125 /* Pods-exchange rate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exchange rate.release.xcconfig"; path = "Target Support Files/Pods-exchange rate/Pods-exchange rate.release.xcconfig"; sourceTree = "<group>"; };
 		FF2ECF2C02E1AC7B2BCBBDB6 /* Pods-exchange rate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exchange rate.debug.xcconfig"; path = "Target Support Files/Pods-exchange rate/Pods-exchange rate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,8 +100,8 @@
 				48E28B24253A74A10084ABC3 /* View */,
 				48E28B26253A74C20084ABC3 /* Controller */,
 				48E28B18253A06820084ABC3 /* Assets.xcassets */,
-				48E28B1A253A06820084ABC3 /* LaunchScreen.storyboard */,
 				48E28B1D253A06820084ABC3 /* Info.plist */,
+				48ED899D25D9193F00DC4954 /* select.mp3 */,
 				481AEA112550B51400BA8CF6 /* constants.swift */,
 			);
 			path = "exchange rate";
@@ -110,6 +112,7 @@
 			children = (
 				48E28B15253A06820084ABC3 /* Main.storyboard */,
 				48D86DD8253AF55B00184666 /* MyCustomCell.swift */,
+				48E28B1A253A06820084ABC3 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48ED899E25D9193F00DC4954 /* select.mp3 in Resources */,
 				48E28B1C253A06820084ABC3 /* LaunchScreen.storyboard in Resources */,
 				48E28B19253A06820084ABC3 /* Assets.xcassets in Resources */,
 				48E28B17253A06820084ABC3 /* Main.storyboard in Resources */,

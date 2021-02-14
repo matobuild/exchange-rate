@@ -130,7 +130,7 @@ class ViewController: UIViewController {
             
             
         default:
-            print("wtf")
+            print("error")
         }
     }
     
@@ -218,8 +218,6 @@ extension ViewController : CurrencyManagerDelegate{
     func didFailWithError(error: Error) {
         print(error)
     }
-    
-    
 }
 //MARK: - Swipe gesture
 

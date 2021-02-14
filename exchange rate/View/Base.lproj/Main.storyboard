@@ -27,11 +27,11 @@
                                                 <rect key="frame" x="50" y="50" width="314" height="348"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="lvk-QE-Ce1">
-                                                        <rect key="frame" x="28.5" y="0.0" width="257" height="116"/>
+                                                        <rect key="frame" x="25.5" y="0.0" width="263.5" height="116"/>
                                                         <gestureRecognizers/>
                                                         <string key="text">Chinese Renminbi 🇨🇳
 </string>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                                         <color key="textColor" systemColor="systemTealColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -329,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TO2-Vd-gU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584.057971014493" y="873.88392857142856"/>
+            <point key="canvasLocation" x="2841" y="874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CT0-AH-TsO">
