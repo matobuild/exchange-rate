@@ -46,9 +46,21 @@ class ViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
             self.view.addGestureRecognizer(swipeRight)
-
-         
     }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    //check internet connection
+    if NetworkMonitor.shared.isConnected{
+      print("on internet")
+    }else{
+      print("not on internet")
+      let alert = UIAlertController(title: "No internet connection", message: "Please connect to internet to before using the app", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+      self.present(alert, animated: true, completion: nil)
+    }
+  }
     
     //MARK: - currency seletion
     @IBAction func chooseCurrencyPressed(_ sender: UIButton){
