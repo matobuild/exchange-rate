@@ -18,13 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
       
       let defaults = UserDefaults.standard
-      let darkModeEnabled = defaults.bool(forKey: "darkModeEnabled")
-      switch darkModeEnabled {
-      case true:
-        window?.overrideUserInterfaceStyle = .dark
-      case false:
-       window?.overrideUserInterfaceStyle = .light
-    }
+      guard defaults.bool(forKey: "deviceAppearanceSelected") else {
+        let darkModeEnabled = defaults.bool(forKey: "darkModeEnabled")
+        switch darkModeEnabled {
+        case true:
+          window?.overrideUserInterfaceStyle = .dark
+        case false:
+         window?.overrideUserInterfaceStyle = .light
+      }
+        return
+      }
+      window?.overrideUserInterfaceStyle = .unspecified
+     
       
         guard let _ = (scene as? UIWindowScene) else { return }
     }
